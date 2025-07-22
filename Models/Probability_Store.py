@@ -13,7 +13,9 @@ class ProbabilityStore:
         self.class_priors[cls] = prior
 
     def store_likelihood(self, feature_index, value, cls, probability):
-        pass
+        if feature_index not in self.feature_likelihoods:
+            self.feature_likelihoods[feature_index] = {}
+        self.feature_likelihoods[feature_index][(value, cls)] = probability
 
     def get_likelihood(self, feature_index, value, cls, default=1e-6):
-        pass
+        return self.feature_likelihoods[feature_index].get((value, cls), default)
