@@ -1,6 +1,6 @@
 from Models.Probability_Store import ProbabilityStore
 from Models.Trainer import NaiveBayesTrainer
-from Models.Predictor import NaiveBayesPredictor
+from Models.Classifier import NaiveBayesPredictor
 
 class NaiveBayesClassifier:
     def __init__(self):

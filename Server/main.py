@@ -2,7 +2,7 @@ from Models.Data_Loader import CSVLoader
 from Models.Data_Processor import DataProcessor
 from Models.Trainer import NaiveBayesTrainer
 from Models.Probability_Store import ProbabilityStore
-from Models.Predictor import NaiveBayesPredictor
+from Models.Classifier import NaiveBayesPredictor
 from Models.Validator import Validator
 
 

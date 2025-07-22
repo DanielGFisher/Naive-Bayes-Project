@@ -9,6 +9,10 @@ class DataCleaner:
             if not mode.empty:
                 cleaned_df[col].fillna(mode[0], inplace=True)
             else:
-                cleaned_df[col] = cleaned_df[col].astype(str).str.strip().str.lower
+                cleaned_df[col] = cleaned_df[col].astype(str).str.strip().str.lower()
+
+        for col in cleaned_df.select_dtypes(include="number").columns:
+            median = cleaned_df[col].median()
+            cleaned_df[col].fillna(median, inplace=True)
 
         return cleaned_df
