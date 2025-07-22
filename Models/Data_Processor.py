@@ -1,5 +1,5 @@
 class DataProcessor:
-    def prepare_data(df, label_column):
+    def prepare_data(self, df, label_column):
         X = df.drop(columns=[label_column]).values
         y = df[label_column].values
         return X, y
