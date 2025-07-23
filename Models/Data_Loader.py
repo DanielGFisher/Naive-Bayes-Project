@@ -1,3 +1,6 @@
+import pandas as pd
+
 class CSVLoader:
     def load_csv(self, file_path):
-        pass
+        return pd.read_csv(file_path)
+
